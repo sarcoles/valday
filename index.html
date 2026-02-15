@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Valentine's Day :3</title>
   <style>
     body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;  
+      align-items: center;      
       background: #ffe6f0;
+      font-family: Arial, sans-serif;
+    }
+
+  
+    .heart {
+      position: relative;
+      width: 300px;    
+      height: 300px;
+      background: #ff4d6d;
+      transform: rotate(-45deg);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      margin: 0;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
-  .heart {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    background: #ff4d6d;
-    transform: rotate(-45deg);
-    margin-right: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 40px;
-}
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: #ff4d6d;
+      border-radius: 50%;
+    }
 
-  .heart::before,
-  .heart::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: #ff4d6d;
-    border-radius: 50%;
-}
+    .heart::before {
+      top: -150px;
+      left: 0;
+    }
 
-  .heart::before {
-    top: -200px;
-    left: 0;
-}
+    .heart::after {
+      left: 150px;
+      top: 0;
+    }
 
-  .heart::after {
-    left: 200px;
-    top: 0;
-}
+   
+    .heart-content {
+      transform: rotate(45deg); 
+      color: white;
+      z-index: 1;
+    }
+
+    .heart-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+    }
 
      h1 {
       font-size: 20px;
@@ -72,6 +84,7 @@
 
   <div class="heart">
     <div class="heart-content">
+      <title>Happy Valentine's Day :3</title>
       <p>
       My sweet duo !! I wanna tell you every day how much I like you and how giddy I feel with you. <br>
       I can't wait for when we finally get to meet in person !! ((:<br>
